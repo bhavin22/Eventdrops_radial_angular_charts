@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Gridster + Angular-nvD3</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="libs/nv.d3.min.css"/>    
+    <script src="libs/angular.js"></script>
+    <script src="libs/d3.min.js" charset="utf-8"></script>
+    <script src="libs/nv.d3.min.js"></script>
+    <script src="libs/angular-nvd3.js"></script>
+    
+    <link rel="stylesheet" href="libs/angular-gridster.min.css"/>
+    <script src="libs/angular-gridster.min.js"></script>
+    <script type="text/javascript" src="extracharts/extracharts.js"></script>    
+    <script src="script.js"></script>
+    <script src="dataService.js"></script>
+
+    <link rel="stylesheet" href="extracharts/radial.css"/>
+    <link rel="stylesheet" href="extracharts/eventdrops.css"/>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    
+  <div gridster="gridsterOptions">
+  	<ul class="with-3d-shadow with-transitions">
+  		<li gridster-item="widget" ng-repeat="widget in dashboard.widgets">
+  		  <div class="box">
+            <div class="box-header">
+                <h3>{{ widget.name }}</h3>
+            </div>
+            <div class="box-content">
+              <nvd3 options="widget.chart.options" 
+                    data="widget.chart.data" 
+                    api="widget.chart.api" 
+                    config="config" 
+                    events="events"></nvd3>
+            </div>
+        </div>
+  		</li>
+      <li gridster-item="widget" ng-repeat="widget in extraDashboard.widgets">
+        <div class="box-header">
+                <h3>{{ widget.name }}</h3>
+        </div>
+        <div class="box-content" id={{widget.chart.options.type}}>
+          <extracharts options="widget.chart.options" 
+                  data="widget.chart.data" 
+                  api="widget.chart.api" 
+                  config="config" 
+                  events="events"></extracharts>  
+        </div>
+      </li>
+  	</ul>
+  </div>
+
+  <br><a href="http://krispo.github.io/angular-nvd3/" target="_blank" style="float: right;">See more</a>
+  </script>
+  </body>
+
+</html>

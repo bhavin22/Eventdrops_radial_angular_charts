@@ -1,0 +1,89 @@
+body #radialChart{
+            background-color: #FFFFFF;
+        }
+
+       #radialChart #test .arc2 {
+            stroke-weight:0.1;
+            fill: #3660b0;
+        }
+
+       #radialChart #outer {
+            background:#FFFFFF;
+            border-radius: 5px;
+            color: #000;
+        }
+       #radialChart #div1,#radialChart #div2,#radialChart #div3,#radialChart #div4 {
+            width: 33%;
+            height: 200px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+       #radialChart #div2 .arc {
+            stroke-weight: 0.1;
+            fill: #f0a417;
+        }
+
+       #radialChart #div2 .arc2 {
+            stroke-weight: 0.1;
+            fill: #b00d08;
+        }
+
+       #radialChart #div3 .arc {
+            stroke-weight: 0.1;
+            fill: #1d871b;
+        }
+
+
+       #radialChart .selectedRadial {
+            border-radius: 3px;
+            background: #f4f4f4;
+            color: #000;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            border: 1px solid rgba(200,200,200,0.85);
+        }
+
+       #radialChart .radial {
+            border-radius: 3px;
+            background: #FFFFFF;
+            color: #000;
+
+        }
+
+#radialChart .background {
+    fill: #FFFFFF;
+    fill-opacity: 0.01;
+}
+
+#radialChart .component {
+    fill: #FFFFFF;
+}
+
+#radialChart .component .label {
+    font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+    text-anchor: middle;
+    fill: #0000FF;
+}
+
+#radialChart .arc {
+    stroke-weight:0.1;
+    fill: #4e8fff;
+}
+
+
+#radialChart .arc2 {
+    stroke-weight:0.1;
+    fill: #3660b0;
+}
+
+
+#radialChart .label {
+    font-family:  Myriad, "Helvetic Neue", Helvetica, Arial;
+    text-anchor: middle;
+}
+
+#radialChart .radial-svg {
+    display: block;
+    margin: 0 auto;
+}
